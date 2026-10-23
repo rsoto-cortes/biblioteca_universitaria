@@ -1,0 +1,39 @@
+# Biblioteca Universitaria
+
+Aplicación web desarrollada con **Flask** que presenta información de una biblioteca universitaria mediante varias páginas enlazadas.
+
+## Elementos implementados
+
+### Aplicación y rutas
+
+El archivo `server.py` crea la aplicación Flask y define las rutas disponibles:
+
+| Ruta         | Página    | Contenido 
+|              |           |
+| `/`          | Inicio    | Presentación de la biblioteca, propósito y horario de atención. 
+| `/catalogo`  | Catálogo  | Categorías de materiales disponibles y una breve descripción. 
+| `/servicios` | Servicios | Servicios de la biblioteca y explicación de cada uno. 
+| `/contacto`  | Contacto  | Ubicación, teléfono, correo electrónico y horario de atención.
+
+Cada ruta renderiza su plantilla y le pasa un título y un mensaje de bienvenida.
+
+### Plantillas HTML
+
+Las plantillas están en la carpeta `templates/`:
+
+- **`layout.html`**: estructura HTML compartida, título dinámico y barra de navegación con enlaces a las cuatro páginas. También carga Bootstrap 4.6.2 desde un CDN.
+- **`index.html`**: página de inicio de la Biblioteca Universitaria, con su propósito y horario.
+- **`catalogo.html`**: enumera libros, revistas, periódicos, artículos y tesis.
+- **`servicios.html`**: describe el préstamo de libros, la consulta en sala, el acceso a recursos electrónicos y el asesoramiento en investigación.
+- **`contacto.html`**: muestra la ubicación de la biblioteca y sus medios de contacto.
+
+Las páginas de contenido extienden `layout.html` y colocan su contenido en el bloque `content`. Las variables `title` y `message` se insertan con expresiones de Jinja2.
+
+### Dependencias
+
+`requirements.txt` especifica las dependencias de Python. La aplicación utiliza Flask; sus paquetes relacionados, como Jinja2 y Werkzeug, también aparecen en la lista.
+
+
+## Alcance actual
+
+El ejercicio implementa páginas informativas estáticas servidas por Flask. No incluye una base de datos, búsqueda de materiales, formularios de contacto ni gestión de préstamos. El servidor se inicia con el modo de depuración activado, por lo que esta configuración es adecuada para desarrollo local, no para producción.
