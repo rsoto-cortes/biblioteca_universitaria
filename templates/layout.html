@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <meta charset="UTF-8">
@@ -8,32 +8,17 @@
     </head>
     <body>
         <div class="container-fluid">
-            
-        
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('servicios')}}">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('contacto')}}">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('catalogo')}}">Catalogo</a>
-                    </li>
-                    </ul>
+
+            <nav aria-label="Navegación principal">
+                <div class="nav nav-tabs">
+                    <a class="nav-link{% if request.endpoint == 'home' %} active{% endif %}" href="{{ url_for('home') }}"{% if request.endpoint == 'home' %} aria-current="page"{% endif %}>Inicio</a>
+                    <a class="nav-link{% if request.endpoint == 'catalogo' %} active{% endif %}" href="{{ url_for('catalogo') }}"{% if request.endpoint == 'catalogo' %} aria-current="page"{% endif %}>Catálogo</a>
+                    <a class="nav-link{% if request.endpoint == 'servicios' %} active{% endif %}" href="{{ url_for('servicios') }}"{% if request.endpoint == 'servicios' %} aria-current="page"{% endif %}>Servicios</a>
+                    <a class="nav-link{% if request.endpoint == 'contacto' %} active{% endif %}" href="{{ url_for('contacto') }}"{% if request.endpoint == 'contacto' %} aria-current="page"{% endif %}>Contacto</a>
                 </div>
             </nav>
 
             {% block content %}
-            
             {% endblock %}
         </div>
     </body>

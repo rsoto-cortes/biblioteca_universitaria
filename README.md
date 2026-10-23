@@ -22,7 +22,7 @@ Cada ruta renderiza su plantilla y le pasa un título y un mensaje de bienvenida
 
 Las plantillas están en la carpeta `templates/`:
 
-- **`layout.html`**: estructura HTML compartida, título dinámico y barra de navegación con enlaces a las cuatro páginas. También carga Bootstrap 4.6.2 desde un CDN.
+- **`layout.html`**: estructura HTML compartida, título dinámico y pestañas de navegación que enlazan con las cuatro páginas y resaltan la página actual. También carga Bootstrap 4.6.2 desde un CDN.
 - **`index.html`**: página de inicio de la Biblioteca Universitaria, con su propósito y horario.
 - **`catalogo.html`**: enumera libros, revistas, periódicos, artículos y tesis.
 - **`servicios.html`**: describe el préstamo de libros, la consulta en sala, el acceso a recursos electrónicos y el asesoramiento en investigación.
@@ -33,4 +33,3 @@ Las páginas de contenido extienden `layout.html` y colocan su contenido en el b
 ### Dependencias
 
 `requirements.txt` especifica las dependencias de Python. La aplicación utiliza Flask; sus paquetes relacionados, como Jinja2 y Werkzeug, también aparecen en la lista.
-
