@@ -8,12 +8,13 @@ Aplicación web desarrollada con **Flask** que presenta información de una bibl
 
 El archivo `server.py` crea la aplicación Flask y define las rutas disponibles:
 
-| Ruta         | Página    | Contenido 
-|              |           |
-| `/`          | Inicio    | Presentación de la biblioteca, propósito y horario de atención. 
-| `/catalogo`  | Catálogo  | Categorías de materiales disponibles y una breve descripción. 
-| `/servicios` | Servicios | Servicios de la biblioteca y explicación de cada uno. 
-| `/contacto`  | Contacto  | Ubicación, teléfono, correo electrónico y horario de atención.
+La ruta con `/` nos lleva a Inicio la cual es la presentación de la biblioteca, propósito y horario de atención. 
+
+La ruta con `/catalogo`  nos lleva a Catálogo la cual nos presenta las categorías de materiales disponibles y una breve descripción. 
+
+La ruta con `/servicios` nos lleva a Servicios la cual muestra los servicios de la biblioteca y explicación de cada uno. 
+
+La ruta con `/contacto`  nos lleva a Contacto la cual muesta la ubicación, teléfono, correo electrónico y horario de atención.
 
 Cada ruta renderiza su plantilla y le pasa un título y un mensaje de bienvenida.
 
