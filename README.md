@@ -34,7 +34,3 @@ Las páginas de contenido extienden `layout.html` y colocan su contenido en el b
 
 `requirements.txt` especifica las dependencias de Python. La aplicación utiliza Flask; sus paquetes relacionados, como Jinja2 y Werkzeug, también aparecen en la lista.
 
-
-## Alcance actual
-
-El ejercicio implementa páginas informativas estáticas servidas por Flask. No incluye una base de datos, búsqueda de materiales, formularios de contacto ni gestión de préstamos. El servidor se inicia con el modo de depuración activado, por lo que esta configuración es adecuada para desarrollo local, no para producción.
