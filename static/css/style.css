@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Estilos Globales y Variables (Paleta Minimalista)
+   ========================================================================== */
+:root {
+    --bg-principal: #f9f9fb;
+    --bg-tarjeta: #ffffff;
+    --texto-principal: #1a1a1a;
+    --texto-secundario: #64748b;
+    --acento: #0f172a; /* Azul oscuro/negro profesional */
+    --borde: #e2e8f0;
+    --fuente: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   Contenedor Principal y Estructura
+   ========================================================================== */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-tarjeta);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================================================
+   Navegación / Menú Superior
+   ========================================================================== */
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--borde);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--texto-secundario);
+}
+
+/* Supone que el menú podría tener enlaces en el futuro, por ahora estiliza el texto */
+.nav-menu a, .nav-menu span {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-menu a:hover, .nav-menu span:hover {
+    color: var(--acento);
+}
+
+/* ==========================================================================
+   Tipografía y Títulos
+   ========================================================================== */
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--acento);
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.page-message {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 2rem;
+}
+
+.content-text {
+    color: var(--texto-principal);
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Listas y Elementos (Catálogo, Servicios, Contacto)
+   ========================================================================== */
+.minimal-list {
+    list-style: none; /* Quitamos los puntos tradicionales */
+    margin-bottom: 2rem;
+}
+
+.minimal-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--texto-principal);
+}
+
+/* Viñeta minimalista personalizada */
+.minimal-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--texto-secundario);
+}
+
+/* Sublistas o listas detalladas (como en Servicios) */
+.detailed-list {
+    list-style: none;
+}
+
+.detailed-list li {
+    padding: 1.25rem;
+    background-color: var(--bg-principal);
+    border-left: 3px solid var(--acento);
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Negrita sutil para los títulos internos de las listas de servicios */
+.detailed-list li strong {
+    color: var(--acento);
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
