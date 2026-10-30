@@ -1,0 +1,127 @@
+/* ==========================================================================
+   TEMA: DÍA DE MUERTOS - BIBLIOTECA UNIVERSITARIA (BOOTSTRAP 4 INTEGRATION)
+   ========================================================================== */
+
+/* Variables de Paleta Temática */
+:root {
+  --bg-night: #0d0914;           /* Fondo negro místico con matiz morado */
+  --surface-altar: #191224;      /* Contenedores morado oscuro obispo */
+  --cempasuchil: #ff7900;        /* Naranja tradicional de la flor */
+  --cempasuchil-glow: #ff9100;   /* Naranja brillante para estados activos */
+  --papel-cyan: #00e5ff;         /* Azul calaverita / papel picado para acentos */
+  --text-bone: #f4effa;          /* Blanco hueso suave para alta legibilidad */
+  --text-muted-purple: #9a91a7;  /* Gris morado para textos secundarios */
+}
+
+/* Base del Sitio */
+body {
+  background-color: var(--bg-night) !important;
+  color: var(--text-bone) !important;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+/* Sobrescritura del Contenedor de Bootstrap */
+.container-fluid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px !important;
+}
+
+/* ==========================================================================
+   COMPONENTES: NAVEGACIÓN (NAV TABS TEMÁTICO)
+   ========================================================================== */
+
+/* Línea base del menú */
+.nav-tabs {
+  border-bottom: 2px solid rgba(142, 45, 226, 0.25) !important;
+  margin-bottom: 40px;
+  gap: 5px;
+}
+
+/* Pestañas en estado normal */
+.nav-tabs .nav-link {
+  color: var(--text-muted-purple) !important;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+/* Pestaña en Hover (Efecto Papel Picado Cian) */
+.nav-tabs .nav-link:hover {
+  color: var(--papel-cyan) !important;
+  border-color: rgba(0, 229, 255, 0.2) rgba(0, 229, 255, 0.2) transparent !important;
+  background-color: rgba(0, 229, 255, 0.04) !important;
+}
+
+/* Pestaña Activa (Efecto Altar Cempasúchil Encendido) */
+.nav-tabs .nav-link.active {
+  color: #ffffff !important;
+  background-color: var(--surface-altar) !important;
+  border-color: rgba(255, 121, 0, 0.4) rgba(255, 121, 0, 0.4) var(--surface-altar) !important;
+  box-shadow: 0 -4px 12px rgba(255, 121, 0, 0.15);
+  position: relative;
+}
+
+/* Indicador luminoso superior exclusivo para la pestaña activa */
+.nav-tabs .nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cempasuchil), var(--cempasuchil-glow));
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA CONTENIDOS ({% block content %})
+   ========================================================================== */
+
+/* Títulos principales dentro del contenido */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 50%, var(--cempasuchil));
+  
+  /* Agrega ambas líneas en este orden exacto */
+  -webkit-background-clip: text;
+  background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+
+/* Párrafos e información informativa */
+p {
+  color: var(--text-bone);
+  line-height: 1.7;
+}
+
+/* Clase de utilidad por si usas tarjetas de Bootstrap en catálogo o servicios */
+.card {
+  background-color: var(--surface-altar) !important;
+  border: 1px solid rgba(142, 45, 226, 0.15) !important;
+  color: var(--text-bone) !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cempasuchil) !important;
+  box-shadow: 0 8px 24px rgba(255, 121, 0, 0.2) !important;
+}
