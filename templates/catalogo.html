@@ -4,17 +4,36 @@
 <div class="container-fluid">
     <h1>CATALOGO</h1>
     <p>{{ message }}</p>
-    <p>Las categorias que tenemos en nuestra biblioteca son:
-        <ul>
-            <li>Libros</li>
-            <li>Revistas</li>
-            <li>Periodicos</li>
-            <li>Articulos</li>
-            <li>Tesis</li>
-        </ul>
-    </p>
+    <p>Las categorias que tenemos en nuestra biblioteca son:</p>
+    <ul>
+        <li>Libros</li>
+        <li>Revistas</li>
+        <li>Periodicos</li>
+        <li>Articulos</li>
+        <li>Tesis</li>
+    </ul>
     <p>Cada categoria tiene informacion importante dependiendo tu profesion como lo serian libros sobre investigacion, Revistas cientificas y Tesis
         las cuales te ayudaran en tu desarrollo profesional y en tu vida laboral.
     </p>
 </div>
-{% endblock %}
+
+ <div id="carouselExampleControls" class="carousel slide mi-carrusel" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='img/catalogo/cuentos.jpg') }}" class="d-block w-100" alt="Cuentos" />
+      </div>
+
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/catalogo/exorcista.jpg') }}" class="d-block w-100" alt="Exorcista" />
+      </div>
+
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/catalogo/sombras.jpg') }}" class="d-block w-100" alt="Sombras de mi padre" />
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+  </div>
+{% endblock content %}
