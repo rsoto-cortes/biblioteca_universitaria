@@ -22,7 +22,7 @@ Cada ruta renderiza su plantilla y le pasa un título y un mensaje de bienvenida
 
 Las plantillas están en la carpeta `templates/`:
 
-- **`layout.html`**: estructura HTML compartida, título dinámico y pestañas de navegación que enlazan con las cuatro páginas y resaltan la página actual. También carga Bootstrap 4.6.2 desde un CDN.
+- **`layout.html`**: estructura HTML compartida, título dinámico y pestañas de navegación que enlazan con las cuatro páginas y resaltan la página actual. Carga Bootstrap 4.6.2 desde `static/` para que el diseño no dependa de la disponibilidad del CDN.
 - **`index.html`**: página de inicio de la Biblioteca Universitaria, con su propósito y horario.
 - **`catalogo.html`**: enumera libros, revistas, periódicos, artículos y tesis.
 - **`servicios.html`**: describe el préstamo de libros, la consulta en sala, el acceso a recursos electrónicos y el asesoramiento en investigación.
